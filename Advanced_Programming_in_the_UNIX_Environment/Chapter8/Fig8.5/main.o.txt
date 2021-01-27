@@ -1,0 +1,121 @@
+
+main.o:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000000000 <main>:
+#include "apue.h"
+#include <sys/wait.h>
+
+int
+main(void){
+   0:	f3 0f 1e fa          	endbr64 
+   4:	55                   	push   %rbp
+   5:	48 89 e5             	mov    %rsp,%rbp
+   8:	48 83 ec 10          	sub    $0x10,%rsp
+   c:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  13:	00 00 
+  15:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  19:	31 c0                	xor    %eax,%eax
+	pid_t	pid;
+	int 	status;
+
+	if ((pid = fork()) < 0)
+  1b:	e8 00 00 00 00       	callq  20 <main+0x20>
+  20:	89 45 f4             	mov    %eax,-0xc(%rbp)
+  23:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+  27:	79 11                	jns    3a <main+0x3a>
+		err_sys("fork error");
+  29:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 30 <main+0x30>
+  30:	b8 00 00 00 00       	mov    $0x0,%eax
+  35:	e8 00 00 00 00       	callq  3a <main+0x3a>
+	else if (pid == 0)
+  3a:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+  3e:	75 0a                	jne    4a <main+0x4a>
+		exit(7);
+  40:	bf 07 00 00 00       	mov    $0x7,%edi
+  45:	e8 00 00 00 00       	callq  4a <main+0x4a>
+
+	if (wait(&status) != pid)
+  4a:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+  4e:	48 89 c7             	mov    %rax,%rdi
+  51:	e8 00 00 00 00       	callq  56 <main+0x56>
+  56:	39 45 f4             	cmp    %eax,-0xc(%rbp)
+  59:	74 11                	je     6c <main+0x6c>
+		err_sys("wait error");
+  5b:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 62 <main+0x62>
+  62:	b8 00 00 00 00       	mov    $0x0,%eax
+  67:	e8 00 00 00 00       	callq  6c <main+0x6c>
+	pr_exit(status);
+  6c:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  6f:	89 c7                	mov    %eax,%edi
+  71:	e8 00 00 00 00       	callq  76 <main+0x76>
+	
+	if ((pid = fork()) < 0)
+  76:	e8 00 00 00 00       	callq  7b <main+0x7b>
+  7b:	89 45 f4             	mov    %eax,-0xc(%rbp)
+  7e:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+  82:	79 11                	jns    95 <main+0x95>
+		err_sys("fork error");
+  84:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 8b <main+0x8b>
+  8b:	b8 00 00 00 00       	mov    $0x0,%eax
+  90:	e8 00 00 00 00       	callq  95 <main+0x95>
+	else if (pid == 0)
+  95:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+  99:	75 05                	jne    a0 <main+0xa0>
+		abort();	/* generates SIGABRT */
+  9b:	e8 00 00 00 00       	callq  a0 <main+0xa0>
+
+	if (wait(&status) != pid)
+  a0:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+  a4:	48 89 c7             	mov    %rax,%rdi
+  a7:	e8 00 00 00 00       	callq  ac <main+0xac>
+  ac:	39 45 f4             	cmp    %eax,-0xc(%rbp)
+  af:	74 11                	je     c2 <main+0xc2>
+		err_sys("wait error");
+  b1:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # b8 <main+0xb8>
+  b8:	b8 00 00 00 00       	mov    $0x0,%eax
+  bd:	e8 00 00 00 00       	callq  c2 <main+0xc2>
+	pr_exit(status);
+  c2:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  c5:	89 c7                	mov    %eax,%edi
+  c7:	e8 00 00 00 00       	callq  cc <main+0xcc>
+
+	if ((pid = fork()) < 0)
+  cc:	e8 00 00 00 00       	callq  d1 <main+0xd1>
+  d1:	89 45 f4             	mov    %eax,-0xc(%rbp)
+  d4:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+  d8:	79 11                	jns    eb <main+0xeb>
+		err_sys("fork error");
+  da:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # e1 <main+0xe1>
+  e1:	b8 00 00 00 00       	mov    $0x0,%eax
+  e6:	e8 00 00 00 00       	callq  eb <main+0xeb>
+	else if (pid == 0)
+  eb:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+  ef:	75 0e                	jne    ff <main+0xff>
+		status /= 0;	/* divide by 0 generate SIGFPE */
+  f1:	8b 45 f0             	mov    -0x10(%rbp),%eax
+  f4:	b9 00 00 00 00       	mov    $0x0,%ecx
+  f9:	99                   	cltd   
+  fa:	f7 f9                	idiv   %ecx
+  fc:	89 45 f0             	mov    %eax,-0x10(%rbp)
+
+	if (wait(&status) != pid)
+  ff:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+ 103:	48 89 c7             	mov    %rax,%rdi
+ 106:	e8 00 00 00 00       	callq  10b <main+0x10b>
+ 10b:	39 45 f4             	cmp    %eax,-0xc(%rbp)
+ 10e:	74 11                	je     121 <main+0x121>
+		err_sys("wait error");
+ 110:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 117 <main+0x117>
+ 117:	b8 00 00 00 00       	mov    $0x0,%eax
+ 11c:	e8 00 00 00 00       	callq  121 <main+0x121>
+	pr_exit(status);
+ 121:	8b 45 f0             	mov    -0x10(%rbp),%eax
+ 124:	89 c7                	mov    %eax,%edi
+ 126:	e8 00 00 00 00       	callq  12b <main+0x12b>
+	
+	exit(0);
+ 12b:	bf 00 00 00 00       	mov    $0x0,%edi
+ 130:	e8 00 00 00 00       	callq  135 <main+0x135>

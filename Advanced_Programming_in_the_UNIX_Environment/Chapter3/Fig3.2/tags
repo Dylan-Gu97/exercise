@@ -1,0 +1,18 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CFLAGES	Makefile	/^CFLAGES = -g$/;"	m
+FILE_MODE	apue.h	5;"	d
+MAXLINE	apue.h	7;"	d
+buf1	holefile.c	/^char buf1[] = "abcdefghij";$/;"	v
+buf2	holefile.c	/^char buf2[] = "ABCDEFGHIJ";$/;"	v
+cc	Makefile	/^cc = gcc$/;"	m
+dependence	Makefile	/^dependence := $(sources:.c=.d)$/;"	m
+err_doit	err.c	/^err_doit(int errnoflag, int error, const char* fmt, va_list ap){$/;"	f	file:
+err_sys	err.c	/^err_sys(const char* fmt, ...){$/;"	f
+main	holefile.c	/^main(void){$/;"	f
+objects	Makefile	/^objects := $(sources:.c=.o)$/;"	m
+sources	Makefile	/^sources := $(wildcard *.c)$/;"	m

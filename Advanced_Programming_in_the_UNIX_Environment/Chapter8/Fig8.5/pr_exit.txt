@@ -1,0 +1,616 @@
+
+pr_exit:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64 
+    1004:	48 83 ec 08          	sub    $0x8,%rsp
+    1008:	48 8b 05 d9 2f 00 00 	mov    0x2fd9(%rip),%rax        # 3fe8 <__gmon_start__>
+    100f:	48 85 c0             	test   %rax,%rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	callq  *%rax
+    1016:	48 83 c4 08          	add    $0x8,%rsp
+    101a:	c3                   	retq   
+
+Disassembly of section .plt:
+
+0000000000001020 <.plt>:
+    1020:	ff 35 3a 2f 00 00    	pushq  0x2f3a(%rip)        # 3f60 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	f2 ff 25 3b 2f 00 00 	bnd jmpq *0x2f3b(%rip)        # 3f68 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102d:	0f 1f 00             	nopl   (%rax)
+    1030:	f3 0f 1e fa          	endbr64 
+    1034:	68 00 00 00 00       	pushq  $0x0
+    1039:	f2 e9 e1 ff ff ff    	bnd jmpq 1020 <.plt>
+    103f:	90                   	nop
+    1040:	f3 0f 1e fa          	endbr64 
+    1044:	68 01 00 00 00       	pushq  $0x1
+    1049:	f2 e9 d1 ff ff ff    	bnd jmpq 1020 <.plt>
+    104f:	90                   	nop
+    1050:	f3 0f 1e fa          	endbr64 
+    1054:	68 02 00 00 00       	pushq  $0x2
+    1059:	f2 e9 c1 ff ff ff    	bnd jmpq 1020 <.plt>
+    105f:	90                   	nop
+    1060:	f3 0f 1e fa          	endbr64 
+    1064:	68 03 00 00 00       	pushq  $0x3
+    1069:	f2 e9 b1 ff ff ff    	bnd jmpq 1020 <.plt>
+    106f:	90                   	nop
+    1070:	f3 0f 1e fa          	endbr64 
+    1074:	68 04 00 00 00       	pushq  $0x4
+    1079:	f2 e9 a1 ff ff ff    	bnd jmpq 1020 <.plt>
+    107f:	90                   	nop
+    1080:	f3 0f 1e fa          	endbr64 
+    1084:	68 05 00 00 00       	pushq  $0x5
+    1089:	f2 e9 91 ff ff ff    	bnd jmpq 1020 <.plt>
+    108f:	90                   	nop
+    1090:	f3 0f 1e fa          	endbr64 
+    1094:	68 06 00 00 00       	pushq  $0x6
+    1099:	f2 e9 81 ff ff ff    	bnd jmpq 1020 <.plt>
+    109f:	90                   	nop
+    10a0:	f3 0f 1e fa          	endbr64 
+    10a4:	68 07 00 00 00       	pushq  $0x7
+    10a9:	f2 e9 71 ff ff ff    	bnd jmpq 1020 <.plt>
+    10af:	90                   	nop
+    10b0:	f3 0f 1e fa          	endbr64 
+    10b4:	68 08 00 00 00       	pushq  $0x8
+    10b9:	f2 e9 61 ff ff ff    	bnd jmpq 1020 <.plt>
+    10bf:	90                   	nop
+    10c0:	f3 0f 1e fa          	endbr64 
+    10c4:	68 09 00 00 00       	pushq  $0x9
+    10c9:	f2 e9 51 ff ff ff    	bnd jmpq 1020 <.plt>
+    10cf:	90                   	nop
+    10d0:	f3 0f 1e fa          	endbr64 
+    10d4:	68 0a 00 00 00       	pushq  $0xa
+    10d9:	f2 e9 41 ff ff ff    	bnd jmpq 1020 <.plt>
+    10df:	90                   	nop
+    10e0:	f3 0f 1e fa          	endbr64 
+    10e4:	68 0b 00 00 00       	pushq  $0xb
+    10e9:	f2 e9 31 ff ff ff    	bnd jmpq 1020 <.plt>
+    10ef:	90                   	nop
+    10f0:	f3 0f 1e fa          	endbr64 
+    10f4:	68 0c 00 00 00       	pushq  $0xc
+    10f9:	f2 e9 21 ff ff ff    	bnd jmpq 1020 <.plt>
+    10ff:	90                   	nop
+
+Disassembly of section .plt.got:
+
+0000000000001100 <__cxa_finalize@plt>:
+    1100:	f3 0f 1e fa          	endbr64 
+    1104:	f2 ff 25 ed 2e 00 00 	bnd jmpq *0x2eed(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    110b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Disassembly of section .plt.sec:
+
+0000000000001110 <abort@plt>:
+    1110:	f3 0f 1e fa          	endbr64 
+    1114:	f2 ff 25 55 2e 00 00 	bnd jmpq *0x2e55(%rip)        # 3f70 <abort@GLIBC_2.2.5>
+    111b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001120 <__errno_location@plt>:
+    1120:	f3 0f 1e fa          	endbr64 
+    1124:	f2 ff 25 4d 2e 00 00 	bnd jmpq *0x2e4d(%rip)        # 3f78 <__errno_location@GLIBC_2.2.5>
+    112b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001130 <vsnprintf@plt>:
+    1130:	f3 0f 1e fa          	endbr64 
+    1134:	f2 ff 25 45 2e 00 00 	bnd jmpq *0x2e45(%rip)        # 3f80 <vsnprintf@GLIBC_2.2.5>
+    113b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001140 <strlen@plt>:
+    1140:	f3 0f 1e fa          	endbr64 
+    1144:	f2 ff 25 3d 2e 00 00 	bnd jmpq *0x2e3d(%rip)        # 3f88 <strlen@GLIBC_2.2.5>
+    114b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001150 <__stack_chk_fail@plt>:
+    1150:	f3 0f 1e fa          	endbr64 
+    1154:	f2 ff 25 35 2e 00 00 	bnd jmpq *0x2e35(%rip)        # 3f90 <__stack_chk_fail@GLIBC_2.4>
+    115b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001160 <printf@plt>:
+    1160:	f3 0f 1e fa          	endbr64 
+    1164:	f2 ff 25 2d 2e 00 00 	bnd jmpq *0x2e2d(%rip)        # 3f98 <printf@GLIBC_2.2.5>
+    116b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001170 <snprintf@plt>:
+    1170:	f3 0f 1e fa          	endbr64 
+    1174:	f2 ff 25 25 2e 00 00 	bnd jmpq *0x2e25(%rip)        # 3fa0 <snprintf@GLIBC_2.2.5>
+    117b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001180 <fputs@plt>:
+    1180:	f3 0f 1e fa          	endbr64 
+    1184:	f2 ff 25 1d 2e 00 00 	bnd jmpq *0x2e1d(%rip)        # 3fa8 <fputs@GLIBC_2.2.5>
+    118b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000001190 <fflush@plt>:
+    1190:	f3 0f 1e fa          	endbr64 
+    1194:	f2 ff 25 15 2e 00 00 	bnd jmpq *0x2e15(%rip)        # 3fb0 <fflush@GLIBC_2.2.5>
+    119b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000011a0 <exit@plt>:
+    11a0:	f3 0f 1e fa          	endbr64 
+    11a4:	f2 ff 25 0d 2e 00 00 	bnd jmpq *0x2e0d(%rip)        # 3fb8 <exit@GLIBC_2.2.5>
+    11ab:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000011b0 <strerror@plt>:
+    11b0:	f3 0f 1e fa          	endbr64 
+    11b4:	f2 ff 25 05 2e 00 00 	bnd jmpq *0x2e05(%rip)        # 3fc0 <strerror@GLIBC_2.2.5>
+    11bb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000011c0 <wait@plt>:
+    11c0:	f3 0f 1e fa          	endbr64 
+    11c4:	f2 ff 25 fd 2d 00 00 	bnd jmpq *0x2dfd(%rip)        # 3fc8 <wait@GLIBC_2.2.5>
+    11cb:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+00000000000011d0 <fork@plt>:
+    11d0:	f3 0f 1e fa          	endbr64 
+    11d4:	f2 ff 25 f5 2d 00 00 	bnd jmpq *0x2df5(%rip)        # 3fd0 <fork@GLIBC_2.2.5>
+    11db:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+Disassembly of section .text:
+
+00000000000011e0 <_start>:
+    11e0:	f3 0f 1e fa          	endbr64 
+    11e4:	31 ed                	xor    %ebp,%ebp
+    11e6:	49 89 d1             	mov    %rdx,%r9
+    11e9:	5e                   	pop    %rsi
+    11ea:	48 89 e2             	mov    %rsp,%rdx
+    11ed:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    11f1:	50                   	push   %rax
+    11f2:	54                   	push   %rsp
+    11f3:	4c 8d 05 46 05 00 00 	lea    0x546(%rip),%r8        # 1740 <__libc_csu_fini>
+    11fa:	48 8d 0d cf 04 00 00 	lea    0x4cf(%rip),%rcx        # 16d0 <__libc_csu_init>
+    1201:	48 8d 3d 8b 03 00 00 	lea    0x38b(%rip),%rdi        # 1593 <main>
+    1208:	ff 15 d2 2d 00 00    	callq  *0x2dd2(%rip)        # 3fe0 <__libc_start_main@GLIBC_2.2.5>
+    120e:	f4                   	hlt    
+    120f:	90                   	nop
+
+0000000000001210 <deregister_tm_clones>:
+    1210:	48 8d 3d f9 2d 00 00 	lea    0x2df9(%rip),%rdi        # 4010 <stdout@@GLIBC_2.2.5>
+    1217:	48 8d 05 f2 2d 00 00 	lea    0x2df2(%rip),%rax        # 4010 <stdout@@GLIBC_2.2.5>
+    121e:	48 39 f8             	cmp    %rdi,%rax
+    1221:	74 15                	je     1238 <deregister_tm_clones+0x28>
+    1223:	48 8b 05 ae 2d 00 00 	mov    0x2dae(%rip),%rax        # 3fd8 <_ITM_deregisterTMCloneTable>
+    122a:	48 85 c0             	test   %rax,%rax
+    122d:	74 09                	je     1238 <deregister_tm_clones+0x28>
+    122f:	ff e0                	jmpq   *%rax
+    1231:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    1238:	c3                   	retq   
+    1239:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001240 <register_tm_clones>:
+    1240:	48 8d 3d c9 2d 00 00 	lea    0x2dc9(%rip),%rdi        # 4010 <stdout@@GLIBC_2.2.5>
+    1247:	48 8d 35 c2 2d 00 00 	lea    0x2dc2(%rip),%rsi        # 4010 <stdout@@GLIBC_2.2.5>
+    124e:	48 29 fe             	sub    %rdi,%rsi
+    1251:	48 89 f0             	mov    %rsi,%rax
+    1254:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    1258:	48 c1 f8 03          	sar    $0x3,%rax
+    125c:	48 01 c6             	add    %rax,%rsi
+    125f:	48 d1 fe             	sar    %rsi
+    1262:	74 14                	je     1278 <register_tm_clones+0x38>
+    1264:	48 8b 05 85 2d 00 00 	mov    0x2d85(%rip),%rax        # 3ff0 <_ITM_registerTMCloneTable>
+    126b:	48 85 c0             	test   %rax,%rax
+    126e:	74 08                	je     1278 <register_tm_clones+0x38>
+    1270:	ff e0                	jmpq   *%rax
+    1272:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    1278:	c3                   	retq   
+    1279:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001280 <__do_global_dtors_aux>:
+    1280:	f3 0f 1e fa          	endbr64 
+    1284:	80 3d 8d 2d 00 00 00 	cmpb   $0x0,0x2d8d(%rip)        # 4018 <completed.8060>
+    128b:	75 2b                	jne    12b8 <__do_global_dtors_aux+0x38>
+    128d:	55                   	push   %rbp
+    128e:	48 83 3d 62 2d 00 00 	cmpq   $0x0,0x2d62(%rip)        # 3ff8 <__cxa_finalize@GLIBC_2.2.5>
+    1295:	00 
+    1296:	48 89 e5             	mov    %rsp,%rbp
+    1299:	74 0c                	je     12a7 <__do_global_dtors_aux+0x27>
+    129b:	48 8b 3d 66 2d 00 00 	mov    0x2d66(%rip),%rdi        # 4008 <__dso_handle>
+    12a2:	e8 59 fe ff ff       	callq  1100 <__cxa_finalize@plt>
+    12a7:	e8 64 ff ff ff       	callq  1210 <deregister_tm_clones>
+    12ac:	c6 05 65 2d 00 00 01 	movb   $0x1,0x2d65(%rip)        # 4018 <completed.8060>
+    12b3:	5d                   	pop    %rbp
+    12b4:	c3                   	retq   
+    12b5:	0f 1f 00             	nopl   (%rax)
+    12b8:	c3                   	retq   
+    12b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000012c0 <frame_dummy>:
+    12c0:	f3 0f 1e fa          	endbr64 
+    12c4:	e9 77 ff ff ff       	jmpq   1240 <register_tm_clones>
+
+00000000000012c9 <pr_exit>:
+#include "apue.h"
+#include <sys/wait.h>
+
+void 
+pr_exit(int status){
+    12c9:	f3 0f 1e fa          	endbr64 
+    12cd:	55                   	push   %rbp
+    12ce:	48 89 e5             	mov    %rsp,%rbp
+    12d1:	48 83 ec 10          	sub    $0x10,%rsp
+    12d5:	89 7d fc             	mov    %edi,-0x4(%rbp)
+	if (WIFEXITED(status))
+    12d8:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    12db:	83 e0 7f             	and    $0x7f,%eax
+    12de:	85 c0                	test   %eax,%eax
+    12e0:	75 1e                	jne    1300 <pr_exit+0x37>
+		printf("normal termination, exit status is %d\n",
+				WEXITSTATUS(status));
+    12e2:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    12e5:	c1 f8 08             	sar    $0x8,%eax
+		printf("normal termination, exit status is %d\n",
+    12e8:	0f b6 c0             	movzbl %al,%eax
+    12eb:	89 c6                	mov    %eax,%esi
+    12ed:	48 8d 3d 14 0d 00 00 	lea    0xd14(%rip),%rdi        # 2008 <_IO_stdin_used+0x8>
+    12f4:	b8 00 00 00 00       	mov    $0x0,%eax
+    12f9:	e8 62 fe ff ff       	callq  1160 <printf@plt>
+				"");
+#endif
+	else if (WIFSTOPPED(status))
+		printf("child stopped, signal number is %d\n",
+				WSTOPSIG(status));
+}
+    12fe:	eb 72                	jmp    1372 <pr_exit+0xa9>
+	else if (WIFSIGNALED(status))
+    1300:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    1303:	83 e0 7f             	and    $0x7f,%eax
+    1306:	83 c0 01             	add    $0x1,%eax
+    1309:	d0 f8                	sar    %al
+    130b:	84 c0                	test   %al,%al
+    130d:	7e 3c                	jle    134b <pr_exit+0x82>
+				WCOREDUMP(status) ? " (core file generated)" : "");
+    130f:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    1312:	25 80 00 00 00       	and    $0x80,%eax
+		printf("abnormal termination, signal number is %d%s\n",
+    1317:	85 c0                	test   %eax,%eax
+    1319:	74 09                	je     1324 <pr_exit+0x5b>
+    131b:	48 8d 05 0d 0d 00 00 	lea    0xd0d(%rip),%rax        # 202f <_IO_stdin_used+0x2f>
+    1322:	eb 07                	jmp    132b <pr_exit+0x62>
+    1324:	48 8d 05 1b 0d 00 00 	lea    0xd1b(%rip),%rax        # 2046 <_IO_stdin_used+0x46>
+    132b:	8b 55 fc             	mov    -0x4(%rbp),%edx
+    132e:	89 d1                	mov    %edx,%ecx
+    1330:	83 e1 7f             	and    $0x7f,%ecx
+    1333:	48 89 c2             	mov    %rax,%rdx
+    1336:	89 ce                	mov    %ecx,%esi
+    1338:	48 8d 3d 09 0d 00 00 	lea    0xd09(%rip),%rdi        # 2048 <_IO_stdin_used+0x48>
+    133f:	b8 00 00 00 00       	mov    $0x0,%eax
+    1344:	e8 17 fe ff ff       	callq  1160 <printf@plt>
+}
+    1349:	eb 27                	jmp    1372 <pr_exit+0xa9>
+	else if (WIFSTOPPED(status))
+    134b:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    134e:	0f b6 c0             	movzbl %al,%eax
+    1351:	83 f8 7f             	cmp    $0x7f,%eax
+    1354:	75 1c                	jne    1372 <pr_exit+0xa9>
+				WSTOPSIG(status));
+    1356:	8b 45 fc             	mov    -0x4(%rbp),%eax
+    1359:	c1 f8 08             	sar    $0x8,%eax
+		printf("child stopped, signal number is %d\n",
+    135c:	0f b6 c0             	movzbl %al,%eax
+    135f:	89 c6                	mov    %eax,%esi
+    1361:	48 8d 3d 10 0d 00 00 	lea    0xd10(%rip),%rdi        # 2078 <_IO_stdin_used+0x78>
+    1368:	b8 00 00 00 00       	mov    $0x0,%eax
+    136d:	e8 ee fd ff ff       	callq  1160 <printf@plt>
+}
+    1372:	90                   	nop
+    1373:	c9                   	leaveq 
+    1374:	c3                   	retq   
+
+0000000000001375 <err_sys>:
+#include <stdarg.h>
+
+static void err_doit(int, int, const char*, va_list);
+
+void 
+err_sys(const char* fmt, ...){
+    1375:	f3 0f 1e fa          	endbr64 
+    1379:	55                   	push   %rbp
+    137a:	48 89 e5             	mov    %rsp,%rbp
+    137d:	48 81 ec e0 00 00 00 	sub    $0xe0,%rsp
+    1384:	48 89 bd 28 ff ff ff 	mov    %rdi,-0xd8(%rbp)
+    138b:	48 89 b5 58 ff ff ff 	mov    %rsi,-0xa8(%rbp)
+    1392:	48 89 95 60 ff ff ff 	mov    %rdx,-0xa0(%rbp)
+    1399:	48 89 8d 68 ff ff ff 	mov    %rcx,-0x98(%rbp)
+    13a0:	4c 89 85 70 ff ff ff 	mov    %r8,-0x90(%rbp)
+    13a7:	4c 89 8d 78 ff ff ff 	mov    %r9,-0x88(%rbp)
+    13ae:	84 c0                	test   %al,%al
+    13b0:	74 20                	je     13d2 <err_sys+0x5d>
+    13b2:	0f 29 45 80          	movaps %xmm0,-0x80(%rbp)
+    13b6:	0f 29 4d 90          	movaps %xmm1,-0x70(%rbp)
+    13ba:	0f 29 55 a0          	movaps %xmm2,-0x60(%rbp)
+    13be:	0f 29 5d b0          	movaps %xmm3,-0x50(%rbp)
+    13c2:	0f 29 65 c0          	movaps %xmm4,-0x40(%rbp)
+    13c6:	0f 29 6d d0          	movaps %xmm5,-0x30(%rbp)
+    13ca:	0f 29 75 e0          	movaps %xmm6,-0x20(%rbp)
+    13ce:	0f 29 7d f0          	movaps %xmm7,-0x10(%rbp)
+    13d2:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    13d9:	00 00 
+    13db:	48 89 85 48 ff ff ff 	mov    %rax,-0xb8(%rbp)
+    13e2:	31 c0                	xor    %eax,%eax
+	va_list		ap;
+	
+	va_start(ap, fmt);
+    13e4:	c7 85 30 ff ff ff 08 	movl   $0x8,-0xd0(%rbp)
+    13eb:	00 00 00 
+    13ee:	c7 85 34 ff ff ff 30 	movl   $0x30,-0xcc(%rbp)
+    13f5:	00 00 00 
+    13f8:	48 8d 45 10          	lea    0x10(%rbp),%rax
+    13fc:	48 89 85 38 ff ff ff 	mov    %rax,-0xc8(%rbp)
+    1403:	48 8d 85 50 ff ff ff 	lea    -0xb0(%rbp),%rax
+    140a:	48 89 85 40 ff ff ff 	mov    %rax,-0xc0(%rbp)
+	err_doit(1, errno, fmt, ap);
+    1411:	e8 0a fd ff ff       	callq  1120 <__errno_location@plt>
+    1416:	8b 00                	mov    (%rax),%eax
+    1418:	48 8d 8d 30 ff ff ff 	lea    -0xd0(%rbp),%rcx
+    141f:	48 8b 95 28 ff ff ff 	mov    -0xd8(%rbp),%rdx
+    1426:	89 c6                	mov    %eax,%esi
+    1428:	bf 01 00 00 00       	mov    $0x1,%edi
+    142d:	e8 0a 00 00 00       	callq  143c <err_doit>
+	va_end(ap);
+	exit(1);
+    1432:	bf 01 00 00 00       	mov    $0x1,%edi
+    1437:	e8 64 fd ff ff       	callq  11a0 <exit@plt>
+
+000000000000143c <err_doit>:
+}
+
+static void
+err_doit(int errnoflag, int error, const char* fmt, va_list ap){
+    143c:	f3 0f 1e fa          	endbr64 
+    1440:	55                   	push   %rbp
+    1441:	48 89 e5             	mov    %rsp,%rbp
+    1444:	41 54                	push   %r12
+    1446:	53                   	push   %rbx
+    1447:	48 81 ec 00 10 00 00 	sub    $0x1000,%rsp
+    144e:	48 83 0c 24 00       	orq    $0x0,(%rsp)
+    1453:	48 83 ec 30          	sub    $0x30,%rsp
+    1457:	89 bd dc ef ff ff    	mov    %edi,-0x1024(%rbp)
+    145d:	89 b5 d8 ef ff ff    	mov    %esi,-0x1028(%rbp)
+    1463:	48 89 95 d0 ef ff ff 	mov    %rdx,-0x1030(%rbp)
+    146a:	48 89 8d c8 ef ff ff 	mov    %rcx,-0x1038(%rbp)
+    1471:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    1478:	00 00 
+    147a:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
+    147e:	31 c0                	xor    %eax,%eax
+	char	buf[MAXLINE];
+	
+	vsnprintf(buf, MAXLINE-1, fmt, ap);
+    1480:	48 8b 8d c8 ef ff ff 	mov    -0x1038(%rbp),%rcx
+    1487:	48 8b 95 d0 ef ff ff 	mov    -0x1030(%rbp),%rdx
+    148e:	48 8d 85 e0 ef ff ff 	lea    -0x1020(%rbp),%rax
+    1495:	be ff 0f 00 00       	mov    $0xfff,%esi
+    149a:	48 89 c7             	mov    %rax,%rdi
+    149d:	e8 8e fc ff ff       	callq  1130 <vsnprintf@plt>
+	if(errnoflag){
+    14a2:	83 bd dc ef ff ff 00 	cmpl   $0x0,-0x1024(%rbp)
+    14a9:	0f 84 c3 00 00 00    	je     1572 <err_doit+0x136>
+		snprintf(buf + strlen(buf), MAXLINE - strlen(buf) - 1, ": %s", strerror(error));
+    14af:	8b 85 d8 ef ff ff    	mov    -0x1028(%rbp),%eax
+    14b5:	89 c7                	mov    %eax,%edi
+    14b7:	e8 f4 fc ff ff       	callq  11b0 <strerror@plt>
+    14bc:	49 89 c4             	mov    %rax,%r12
+    14bf:	48 8d 85 e0 ef ff ff 	lea    -0x1020(%rbp),%rax
+    14c6:	48 89 c7             	mov    %rax,%rdi
+    14c9:	e8 72 fc ff ff       	callq  1140 <strlen@plt>
+    14ce:	ba ff 0f 00 00       	mov    $0xfff,%edx
+    14d3:	48 89 d3             	mov    %rdx,%rbx
+    14d6:	48 29 c3             	sub    %rax,%rbx
+    14d9:	48 8d 85 e0 ef ff ff 	lea    -0x1020(%rbp),%rax
+    14e0:	48 89 c7             	mov    %rax,%rdi
+    14e3:	e8 58 fc ff ff       	callq  1140 <strlen@plt>
+    14e8:	48 8d 95 e0 ef ff ff 	lea    -0x1020(%rbp),%rdx
+    14ef:	48 01 d0             	add    %rdx,%rax
+    14f2:	4c 89 e1             	mov    %r12,%rcx
+    14f5:	48 8d 15 a0 0b 00 00 	lea    0xba0(%rip),%rdx        # 209c <_IO_stdin_used+0x9c>
+    14fc:	48 89 de             	mov    %rbx,%rsi
+    14ff:	48 89 c7             	mov    %rax,%rdi
+    1502:	b8 00 00 00 00       	mov    $0x0,%eax
+    1507:	e8 64 fc ff ff       	callq  1170 <snprintf@plt>
+	strcat(buf, "\n");
+    150c:	48 8d 85 e0 ef ff ff 	lea    -0x1020(%rbp),%rax
+    1513:	48 c7 c1 ff ff ff ff 	mov    $0xffffffffffffffff,%rcx
+    151a:	48 89 c2             	mov    %rax,%rdx
+    151d:	b8 00 00 00 00       	mov    $0x0,%eax
+    1522:	48 89 d7             	mov    %rdx,%rdi
+    1525:	f2 ae                	repnz scas %es:(%rdi),%al
+    1527:	48 89 c8             	mov    %rcx,%rax
+    152a:	48 f7 d0             	not    %rax
+    152d:	48 8d 50 ff          	lea    -0x1(%rax),%rdx
+    1531:	48 8d 85 e0 ef ff ff 	lea    -0x1020(%rbp),%rax
+    1538:	48 01 d0             	add    %rdx,%rax
+    153b:	66 c7 00 0a 00       	movw   $0xa,(%rax)
+	fflush(stdout);
+    1540:	48 8b 05 c9 2a 00 00 	mov    0x2ac9(%rip),%rax        # 4010 <stdout@@GLIBC_2.2.5>
+    1547:	48 89 c7             	mov    %rax,%rdi
+    154a:	e8 41 fc ff ff       	callq  1190 <fflush@plt>
+	fputs(buf, stdout);
+    154f:	48 8b 15 ba 2a 00 00 	mov    0x2aba(%rip),%rdx        # 4010 <stdout@@GLIBC_2.2.5>
+    1556:	48 8d 85 e0 ef ff ff 	lea    -0x1020(%rbp),%rax
+    155d:	48 89 d6             	mov    %rdx,%rsi
+    1560:	48 89 c7             	mov    %rax,%rdi
+    1563:	e8 18 fc ff ff       	callq  1180 <fputs@plt>
+	fflush(NULL);
+    1568:	bf 00 00 00 00       	mov    $0x0,%edi
+    156d:	e8 1e fc ff ff       	callq  1190 <fflush@plt>
+	}
+}
+    1572:	90                   	nop
+    1573:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
+    1577:	64 48 33 04 25 28 00 	xor    %fs:0x28,%rax
+    157e:	00 00 
+    1580:	74 05                	je     1587 <err_doit+0x14b>
+    1582:	e8 c9 fb ff ff       	callq  1150 <__stack_chk_fail@plt>
+    1587:	48 81 c4 30 10 00 00 	add    $0x1030,%rsp
+    158e:	5b                   	pop    %rbx
+    158f:	41 5c                	pop    %r12
+    1591:	5d                   	pop    %rbp
+    1592:	c3                   	retq   
+
+0000000000001593 <main>:
+#include "apue.h"
+#include <sys/wait.h>
+
+int
+main(void){
+    1593:	f3 0f 1e fa          	endbr64 
+    1597:	55                   	push   %rbp
+    1598:	48 89 e5             	mov    %rsp,%rbp
+    159b:	48 83 ec 10          	sub    $0x10,%rsp
+    159f:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+    15a6:	00 00 
+    15a8:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+    15ac:	31 c0                	xor    %eax,%eax
+	pid_t	pid;
+	int 	status;
+
+	if ((pid = fork()) < 0)
+    15ae:	e8 1d fc ff ff       	callq  11d0 <fork@plt>
+    15b3:	89 45 f4             	mov    %eax,-0xc(%rbp)
+    15b6:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+    15ba:	79 11                	jns    15cd <main+0x3a>
+		err_sys("fork error");
+    15bc:	48 8d 3d de 0a 00 00 	lea    0xade(%rip),%rdi        # 20a1 <_IO_stdin_used+0xa1>
+    15c3:	b8 00 00 00 00       	mov    $0x0,%eax
+    15c8:	e8 a8 fd ff ff       	callq  1375 <err_sys>
+	else if (pid == 0)
+    15cd:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+    15d1:	75 0a                	jne    15dd <main+0x4a>
+		exit(7);
+    15d3:	bf 07 00 00 00       	mov    $0x7,%edi
+    15d8:	e8 c3 fb ff ff       	callq  11a0 <exit@plt>
+
+	if (wait(&status) != pid)
+    15dd:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+    15e1:	48 89 c7             	mov    %rax,%rdi
+    15e4:	e8 d7 fb ff ff       	callq  11c0 <wait@plt>
+    15e9:	39 45 f4             	cmp    %eax,-0xc(%rbp)
+    15ec:	74 11                	je     15ff <main+0x6c>
+		err_sys("wait error");
+    15ee:	48 8d 3d b7 0a 00 00 	lea    0xab7(%rip),%rdi        # 20ac <_IO_stdin_used+0xac>
+    15f5:	b8 00 00 00 00       	mov    $0x0,%eax
+    15fa:	e8 76 fd ff ff       	callq  1375 <err_sys>
+	pr_exit(status);
+    15ff:	8b 45 f0             	mov    -0x10(%rbp),%eax
+    1602:	89 c7                	mov    %eax,%edi
+    1604:	e8 c0 fc ff ff       	callq  12c9 <pr_exit>
+	
+	if ((pid = fork()) < 0)
+    1609:	e8 c2 fb ff ff       	callq  11d0 <fork@plt>
+    160e:	89 45 f4             	mov    %eax,-0xc(%rbp)
+    1611:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+    1615:	79 11                	jns    1628 <main+0x95>
+		err_sys("fork error");
+    1617:	48 8d 3d 83 0a 00 00 	lea    0xa83(%rip),%rdi        # 20a1 <_IO_stdin_used+0xa1>
+    161e:	b8 00 00 00 00       	mov    $0x0,%eax
+    1623:	e8 4d fd ff ff       	callq  1375 <err_sys>
+	else if (pid == 0)
+    1628:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+    162c:	75 05                	jne    1633 <main+0xa0>
+		abort();	/* generates SIGABRT */
+    162e:	e8 dd fa ff ff       	callq  1110 <abort@plt>
+
+	if (wait(&status) != pid)
+    1633:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+    1637:	48 89 c7             	mov    %rax,%rdi
+    163a:	e8 81 fb ff ff       	callq  11c0 <wait@plt>
+    163f:	39 45 f4             	cmp    %eax,-0xc(%rbp)
+    1642:	74 11                	je     1655 <main+0xc2>
+		err_sys("wait error");
+    1644:	48 8d 3d 61 0a 00 00 	lea    0xa61(%rip),%rdi        # 20ac <_IO_stdin_used+0xac>
+    164b:	b8 00 00 00 00       	mov    $0x0,%eax
+    1650:	e8 20 fd ff ff       	callq  1375 <err_sys>
+	pr_exit(status);
+    1655:	8b 45 f0             	mov    -0x10(%rbp),%eax
+    1658:	89 c7                	mov    %eax,%edi
+    165a:	e8 6a fc ff ff       	callq  12c9 <pr_exit>
+
+	if ((pid = fork()) < 0)
+    165f:	e8 6c fb ff ff       	callq  11d0 <fork@plt>
+    1664:	89 45 f4             	mov    %eax,-0xc(%rbp)
+    1667:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+    166b:	79 11                	jns    167e <main+0xeb>
+		err_sys("fork error");
+    166d:	48 8d 3d 2d 0a 00 00 	lea    0xa2d(%rip),%rdi        # 20a1 <_IO_stdin_used+0xa1>
+    1674:	b8 00 00 00 00       	mov    $0x0,%eax
+    1679:	e8 f7 fc ff ff       	callq  1375 <err_sys>
+	else if (pid == 0)
+    167e:	83 7d f4 00          	cmpl   $0x0,-0xc(%rbp)
+    1682:	75 0e                	jne    1692 <main+0xff>
+		status /= 0;	/* divide by 0 generate SIGFPE */
+    1684:	8b 45 f0             	mov    -0x10(%rbp),%eax
+    1687:	b9 00 00 00 00       	mov    $0x0,%ecx
+    168c:	99                   	cltd   
+    168d:	f7 f9                	idiv   %ecx
+    168f:	89 45 f0             	mov    %eax,-0x10(%rbp)
+
+	if (wait(&status) != pid)
+    1692:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+    1696:	48 89 c7             	mov    %rax,%rdi
+    1699:	e8 22 fb ff ff       	callq  11c0 <wait@plt>
+    169e:	39 45 f4             	cmp    %eax,-0xc(%rbp)
+    16a1:	74 11                	je     16b4 <main+0x121>
+		err_sys("wait error");
+    16a3:	48 8d 3d 02 0a 00 00 	lea    0xa02(%rip),%rdi        # 20ac <_IO_stdin_used+0xac>
+    16aa:	b8 00 00 00 00       	mov    $0x0,%eax
+    16af:	e8 c1 fc ff ff       	callq  1375 <err_sys>
+	pr_exit(status);
+    16b4:	8b 45 f0             	mov    -0x10(%rbp),%eax
+    16b7:	89 c7                	mov    %eax,%edi
+    16b9:	e8 0b fc ff ff       	callq  12c9 <pr_exit>
+	
+	exit(0);
+    16be:	bf 00 00 00 00       	mov    $0x0,%edi
+    16c3:	e8 d8 fa ff ff       	callq  11a0 <exit@plt>
+    16c8:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    16cf:	00 
+
+00000000000016d0 <__libc_csu_init>:
+    16d0:	f3 0f 1e fa          	endbr64 
+    16d4:	41 57                	push   %r15
+    16d6:	4c 8d 3d 7b 26 00 00 	lea    0x267b(%rip),%r15        # 3d58 <__frame_dummy_init_array_entry>
+    16dd:	41 56                	push   %r14
+    16df:	49 89 d6             	mov    %rdx,%r14
+    16e2:	41 55                	push   %r13
+    16e4:	49 89 f5             	mov    %rsi,%r13
+    16e7:	41 54                	push   %r12
+    16e9:	41 89 fc             	mov    %edi,%r12d
+    16ec:	55                   	push   %rbp
+    16ed:	48 8d 2d 6c 26 00 00 	lea    0x266c(%rip),%rbp        # 3d60 <__do_global_dtors_aux_fini_array_entry>
+    16f4:	53                   	push   %rbx
+    16f5:	4c 29 fd             	sub    %r15,%rbp
+    16f8:	48 83 ec 08          	sub    $0x8,%rsp
+    16fc:	e8 ff f8 ff ff       	callq  1000 <_init>
+    1701:	48 c1 fd 03          	sar    $0x3,%rbp
+    1705:	74 1f                	je     1726 <__libc_csu_init+0x56>
+    1707:	31 db                	xor    %ebx,%ebx
+    1709:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    1710:	4c 89 f2             	mov    %r14,%rdx
+    1713:	4c 89 ee             	mov    %r13,%rsi
+    1716:	44 89 e7             	mov    %r12d,%edi
+    1719:	41 ff 14 df          	callq  *(%r15,%rbx,8)
+    171d:	48 83 c3 01          	add    $0x1,%rbx
+    1721:	48 39 dd             	cmp    %rbx,%rbp
+    1724:	75 ea                	jne    1710 <__libc_csu_init+0x40>
+    1726:	48 83 c4 08          	add    $0x8,%rsp
+    172a:	5b                   	pop    %rbx
+    172b:	5d                   	pop    %rbp
+    172c:	41 5c                	pop    %r12
+    172e:	41 5d                	pop    %r13
+    1730:	41 5e                	pop    %r14
+    1732:	41 5f                	pop    %r15
+    1734:	c3                   	retq   
+    1735:	66 66 2e 0f 1f 84 00 	data16 nopw %cs:0x0(%rax,%rax,1)
+    173c:	00 00 00 00 
+
+0000000000001740 <__libc_csu_fini>:
+    1740:	f3 0f 1e fa          	endbr64 
+    1744:	c3                   	retq   
+
+Disassembly of section .fini:
+
+0000000000001748 <_fini>:
+    1748:	f3 0f 1e fa          	endbr64 
+    174c:	48 83 ec 08          	sub    $0x8,%rsp
+    1750:	48 83 c4 08          	add    $0x8,%rsp
+    1754:	c3                   	retq   
